@@ -1,6 +1,14 @@
+"""Unit tests for the main module."""
+
 import pytest
-from main import (in_meters_per_second, reaction_distance, braking_distance, stopping_distance, safety_distance_meter,
-                  safety_distance_seconds)
+from main import (
+    in_meters_per_second,
+    reaction_distance,
+    braking_distance,
+    stopping_distance,
+    safety_distance_meter,
+    safety_distance_seconds,
+)
 
 
 def test_in_meters_per_second():
@@ -8,7 +16,7 @@ def test_in_meters_per_second():
 
 
 def test_reaction_distance():
-    assert reaction_distance(20) == pytest.approx(28.8,0.01)
+    assert reaction_distance(20) == pytest.approx(28.8, 0.01)
 
 
 def test_braking_distance_dry():
@@ -28,7 +36,7 @@ def test_stopping_distance_wet():
 
 
 def test_safety_distance_meter():
-    assert safety_distance_meter(72, True) == pytest.approx(57.14,0.01)
+    assert safety_distance_meter(72, True) == pytest.approx(57.14, 0.01)
 
 
 def test_safety_distance_seconds():
